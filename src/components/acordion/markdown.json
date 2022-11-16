@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_acordion_markdowns",
+  "info": {
+    "displayName": "Markdown"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "richtext"
+    }
+  }
+}

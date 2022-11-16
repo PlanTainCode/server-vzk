@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conitems",
+  "info": {
+    "singularName": "conitem",
+    "pluralName": "conitems",
+    "displayName": "Контакты (элементы)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "href": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subills",
+  "info": {
+    "singularName": "subill",
+    "pluralName": "subills",
+    "displayName": "Подзаболевания",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Pic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "submenuone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::submenuone.submenuone",
+      "inversedBy": "subills"
+    },
+    "illticles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::illticle.illticle",
+      "mappedBy": "subill"
+    },
+    "prevPic": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

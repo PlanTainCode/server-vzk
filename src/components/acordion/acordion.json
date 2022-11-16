@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_acordion_acordions",
+  "info": {
+    "displayName": "Acordion",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Markdown": {
+      "displayName": "Markdown",
+      "type": "component",
+      "repeatable": true,
+      "component": "acordion.markdown"
+    },
+    "Quote": {
+      "displayName": "Quote",
+      "type": "component",
+      "repeatable": true,
+      "component": "acordion.quote"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

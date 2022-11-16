@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "submenuones",
+  "info": {
+    "singularName": "submenuone",
+    "pluralName": "submenuones",
+    "displayName": "Заболевания",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Pic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "illticles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::illticle.illticle",
+      "mappedBy": "submenuone"
+    },
+    "prevPic": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "subills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subill.subill",
+      "mappedBy": "submenuone"
+    }
+  }
+}

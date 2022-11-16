@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articlemains",
+  "info": {
+    "singularName": "articlemain",
+    "pluralName": "articlemains",
+    "displayName": "Новость",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Pic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Acordion": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acordion.acordion"
+    },
+    "Text": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acordion.markdown"
+    },
+    "Main": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "articlemains"
+    }
+  }
+}

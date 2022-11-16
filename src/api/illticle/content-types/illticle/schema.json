@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "illticles",
+  "info": {
+    "singularName": "illticle",
+    "pluralName": "illticles",
+    "displayName": "Заболевание (статьи)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Pic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "acordion.acordion",
+        "acordion.markdown",
+        "acordion.quote"
+      ]
+    },
+    "submenuone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::submenuone.submenuone",
+      "inversedBy": "illticles"
+    },
+    "subill": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subill.subill",
+      "inversedBy": "illticles"
+    }
+  }
+}
