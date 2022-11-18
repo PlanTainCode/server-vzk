@@ -33,16 +33,6 @@
       "type": "uid",
       "targetField": "Title"
     },
-    "Acordion": {
-      "type": "component",
-      "repeatable": true,
-      "component": "acordion.acordion"
-    },
-    "Text": {
-      "type": "component",
-      "repeatable": true,
-      "component": "acordion.markdown"
-    },
     "Main": {
       "type": "boolean"
     },
@@ -51,6 +41,14 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "articlemains"
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "acordion.acordion",
+        "acordion.markdown",
+        "acordion.quote"
+      ]
     }
   }
 }
